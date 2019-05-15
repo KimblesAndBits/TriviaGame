@@ -105,6 +105,7 @@ $(document).ready(function () {
         } else {
             $(".content-wrapper").html("<h1>");
             $(".content-wrapper h1").text(`You got ${correctGuesses} right! You missed ${missedGuesses}.`);
+            $(".content-wrapper").append("<button id='reset'>RESET");
         }
     };
 
@@ -137,5 +138,10 @@ $(document).ready(function () {
     } else {
         $(".content-wrapper").html("<h1>");
         $(".content-wrapper h1").text("Toby, you are the silent killer. Go back to the annex.");
+        $(".content-wrapper").append("<button id='reset'>RESET");
     };
-})
+
+    $(document.body).on("click", "#reset", function () {
+        location.reload();
+    });
+});

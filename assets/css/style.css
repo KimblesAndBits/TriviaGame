@@ -29,3 +29,7 @@ h4, h5 {
 .row {
     width: 100%;
 }
+
+#reset {
+    color: black;
+}
